@@ -186,7 +186,7 @@ function reset(){
     bally = lavalevel-300;
     
     if(lavalevel<250){
-        bally = lavalevel+50; 
+        bally = lavalevel-50; 
     }
     ballmovex = 0;
     ballmovey = 0;
