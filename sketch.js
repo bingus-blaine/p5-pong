@@ -233,21 +233,44 @@ function keyPressed(){
                 coiny = random(60, lavalevel-ballr-40);
       
     } else if(keyCode === SHIFT)
-        reset();
+        reset2();
     
     }
 
 function gameover(){
-     
     fill(0);
     rect(0, 0, 600, 600);
+                fill(246, 230, 0);
+                textSize(100);
+                 text("Coins:", 100, 300);
+                text(s, 400, 302);
     ballmovex=0;
     ballmovey=0;
     ballx=1500;
     bally=1300;
     l=5
-    s=0
     lavalevel=600 
+}
+
+function reset2(){
+    ballx = 300;
+    if(lavalevel<300){
+        bally = lavalevel-50; 
+    } else {bally = lavalevel-300}
+    ballmovex = 0;
+    ballmovey = 0;
+    ballr = 27;
+    enemy_x = 100;
+    enemy_y = 500;
+    enemy_r = 50
+    enemymove_x = 0;
+    enemymove_y = 0;
+    coinx = -100;
+    coiny = -100;
+    s=0;
+    l=5;
+    lavalevel=600;
+
 }
 
 
