@@ -2,9 +2,7 @@
 /////                                 TO
 /////                            "LAVA ROOM"
 
-///// This is a game about a little ball man who loves to collect coins, but is always being chased by a black hole monster.
-////Every time a coin is taken, the room fills up with more lava. It'sa lose-lose, but the goal is to collect as many coins
-////until the room fills up with lava completely while avoiding the monster. 
+///// This is a game about a little ball man who loves to collect coins, but is always being chased by a black hole monster. Every time a coin is taken, the room fills up with more lava. It'sa lose-lose, but the goal is to collect as many coins until the room fills up with lava completely while avoiding the monster. 
 
 ///HOW TO PLAY:
 ///SPACE TO START GAME/SCARE MONSTER/SCRAMBLE COIN PLACEMENT
@@ -14,6 +12,11 @@
 ///COLLECT THE COINS.
 ///MORE COINS = MORE LAVA.
 ///THE WALLS CAN BE STICKY - BE CAREFUL.
+ 
+ 
+
+ 
+
 
 var ballx 
 var bally 
@@ -182,12 +185,11 @@ function draw(){
 //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 function reset(){
-    ballx = 300;
-    bally = lavalevel-300;
     
-    if(lavalevel<250){
+    ballx = 300;
+    if(lavalevel<300){
         bally = lavalevel-50; 
-    }
+    } else {bally = lavalevel-300}
     ballmovex = 0;
     ballmovey = 0;
     ballr = 27;
